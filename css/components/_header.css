@@ -1,0 +1,124 @@
+.header {
+    padding: 57px 0;
+    background-color: var(--purple-color);
+
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 24px 0;
+  border: 1px solid #000;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px,
+        rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin: 0 60px; */
+}
+
+.header__logo {
+    z-index: 100;
+}
+
+.header__list {
+    display: flex;
+    align-items: center;
+    /* color: var(--red-color); */
+}
+
+.header__link {
+    padding: 8px 17px;
+    font-size: 16px;
+}
+
+.header__link:hover {
+    color: var(--yellow-color);
+    background-color: var(--header-hover);
+    transition: all 200ms;
+}
+
+
+.burger {
+    width: 48px;
+    height: 10px;
+    position: relative;
+    display: none;
+    padding: 10px;
+}
+
+.burger__line {
+    width: 100%;
+    height: 2px;
+    background-color: var(--white-color);
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.burger__line:last-child {
+    top: auto;
+    bottom: 0;
+    height: 3px;
+}
+
+.burger--click {
+    transform: rotate(45deg);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px,
+        rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+@media (max-width: 992px) {
+    .burger {
+        display: block;
+        z-index: 100;
+        cursor: pointer;
+    }
+
+    .header__list {
+        padding-top: 130px;
+        height: 100vh;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        background-color: #4b72b6;
+        display: block;
+        text-align: center;
+        transform: translateY(-200%);
+
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        transition: all 0.4s;
+    }
+
+    .header__list--active {
+        transform: translateY(0);
+    }
+
+    .header__link {
+        display: block;
+    }
+
+
+}
+
+
+/* @media (max-width: 1200px) @media (max-width: 992px) @media (max-width: 768px) @media (max-width: 480px) */
