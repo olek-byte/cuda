@@ -1,6 +1,9 @@
 // $(function () {
 
 // });
+import {testModule} from "./modules/testModule.js";
+
+testModule.init();
 
 
 let listActive = document.querySelector('.header__list');
