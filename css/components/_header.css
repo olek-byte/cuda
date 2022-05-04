@@ -1,12 +1,11 @@
 .header {
-    padding: 57px 0;
-    background-color: var(--purple-color);
-
     position: absolute;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 100;
+    padding: 57px 0;
+    background-color: var(--purple-color);
 }
 
 .sticky {
@@ -26,17 +25,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* margin: 0 60px; */
 }
 
 .header__logo {
     z-index: 100;
+    border-bottom: 3px solid transparent;
+}
+
+.header__logo:hover{
+    border-bottom: 3px solid var(--yellow-color);
+    transition: border-color 300ms;
 }
 
 .header__list {
     display: flex;
     align-items: center;
-    /* color: var(--red-color); */
 }
 
 .header__link {
@@ -50,26 +53,28 @@
     transition: all 200ms;
 }
 
-
 .burger {
-    width: 48px;
-    height: 10px;
     position: relative;
     display: none;
+    width: 48px;
+    height: 10px;
     padding: 10px;
+    transition: all 200ms;
 }
 
-.burger__line {
-    width: 100%;
-    height: 2px;
-    background-color: var(--white-color);
-    display: block;
+.burger::before,
+.burger::after {
+    content:"";
     position: absolute;
     right: 0;
     top: 0;
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--white-color);
 }
 
-.burger__line:last-child {
+.burger::after {
     top: auto;
     bottom: 0;
     height: 3px;
@@ -77,11 +82,7 @@
 
 .burger--click {
     transform: rotate(45deg);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-        rgba(0, 0, 0, 0.12) 0px -12px 30px,
-        rgba(0, 0, 0, 0.12) 0px 4px 6px,
-        rgba(0, 0, 0, 0.17) 0px 12px 13px,
-        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: all 200ms;
 }
 
 @media (max-width: 992px) {
@@ -92,33 +93,26 @@
     }
 
     .header__list {
-        padding-top: 130px;
-        height: 100vh;
         position: absolute;
         left: 0;
         right: 0;
         top: 0;
-        background-color: #4b72b6;
         display: block;
+        padding-top: 130px;
+        height: 100vh;
+        background-color: #4b72b6;      
         text-align: center;
         transform: translateY(-200%);
-
         overflow-y: auto;
         overflow-x: hidden;
-
-        transition: all 0.4s;
     }
 
     .header__list--active {
         transform: translateY(0);
+        transition: all 0.4s;
     }
 
     .header__link {
         display: block;
     }
-
-
 }
-
-
-/* @media (max-width: 1200px) @media (max-width: 992px) @media (max-width: 768px) @media (max-width: 480px) */

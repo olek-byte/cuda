@@ -2,7 +2,7 @@ export const testModule = (() => {
     let value = 0;
 
     const increaseCounter = () => {
-       return  value += 1;
+        return value += 1;
     }
 
     const getValue = () => {

@@ -1,0 +1,94 @@
+.form {
+    padding: 116px 0;
+    background-color: #3c5499;
+}
+
+.form__info {
+    text-align: center;
+}
+
+.form__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.form__input-box {
+    margin-bottom: 28px;
+}
+
+.form__label {
+    max-width: 100%;
+}
+
+.form__label:not(:last-child) {
+    margin-right: 33px;
+}
+
+.form__input, .form__textarea {
+    padding: 20px 22px;
+    background-color: #273a71;
+    color: #fff;
+    border-radius: 6px;
+}
+
+.form__input {
+    width: 414px;
+    height: 56px;
+}
+
+.form__input::placeholder, .form__textarea::placeholder {
+  color: #fff;
+}
+
+.form__btn {
+    background-color: #30bae7;
+}
+
+.form__btn:hover {
+   background-color: #273a71;
+   transition: color 200ms;
+}
+
+.form__textarea-box {
+    margin-bottom: 60px;
+}
+
+.form__textarea {
+    height: 200px;
+    width: 860px;
+    resize: none;
+}
+
+@media (max-width: 992px) {
+    .form {
+        padding: 60px 0;
+    }
+
+    .form__input, .form__textarea {
+        display: block;
+        width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .form {
+        padding: 30px 0;
+    }
+
+    .form__input, .form__textarea {
+        width: 444px;
+    }
+
+    .form__textarea-box {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form__input, .form__textarea {
+        width: 295px;
+    }
+}
+

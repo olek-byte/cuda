@@ -1,0 +1,34 @@
+.footer{
+    background-color: #344b8e;
+}
+
+.footer__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 114px;
+}
+
+.footer__social-link {
+    padding: 14px 33px;
+}
+
+.footer__social-link:hover {
+    color: #30bae7;
+    transition: color 200ms;
+}
+
+@media (max-width: 992px) {
+    .footer {
+        padding: 20px 0;
+    }
+
+    .footer__list {
+        flex-direction: column;
+        height: 272px;
+    }
+
+    .footer__social-item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
