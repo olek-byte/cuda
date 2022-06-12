@@ -316,20 +316,26 @@
                     Tel: (202) 456-1111
                 </p>
 
-                <form class="form__contacts" action="#">
+                <form class="form__contacts" action="#" novalidate>
 
                     <div class="form__input-box">
-                        <label class="form__label">
-                            <input class="form__input" type="text" placeholder="Your Name">
-                        </label>
-
-                        <label class="form__label">
-                            <input class="form__input" type="email" placeholder="Your Email" required>
-                        </label>
+                        <div class="form__input-wrapper">
+                            <label class="form__label">
+                                <input class="form__input" type="text" name="name" placeholder="Your Name" required>
+                                <span class="form__input-error hide"></span>
+                            </label>
+                        </div>
+                        <div class="form__input-wrapper">
+                            <label class="form__label">
+                                <input class="form__input" type="email" name="email" placeholder="Your Email" required>
+                                <span class="form__input-error hide"></span>
+                            </label>
+                        </div>
                     </div>
 
                     <div class="form__textarea-box">
-                        <textarea class="form__textarea" placeholder="Your Message"></textarea>
+                        <textarea class="form__textarea" name="message" placeholder="Your Message" required></textarea>
+                        <span class="form__input-error hide"></span>
                     </div>
 
                     <button class="form__btn btn" type="submit">Send message</button>

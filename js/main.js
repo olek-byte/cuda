@@ -21,3 +21,6 @@ import {
 }
 from './modules/smoothScrollModule.js';
 smoothScrollModule.init();
+
+import { formValidationModule } from './modules/formValidationModule.js';
+formValidationModule.init();

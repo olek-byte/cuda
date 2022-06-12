@@ -12,17 +12,35 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
 }
 
 .form__input-box {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
     margin-bottom: 28px;
 }
 
-.form__label {
-    max-width: 100%;
+.form__input-error {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-size: 12px;
+    color: var(--red-color);
 }
 
-.form__label:not(:last-child) {
+.hide {
+    display: none;
+}
+
+.form__input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.form__input-wrapper :not(:last-child) {
     margin-right: 33px;
 }
 
@@ -52,12 +70,15 @@
 }
 
 .form__textarea-box {
+    position: relative;
+    width: 100%;
     margin-bottom: 60px;
 }
 
 .form__textarea {
     height: 200px;
-    width: 860px;
+    width: 100%;
+    max-width: 860px;
     resize: none;
 }
 
