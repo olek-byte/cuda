@@ -1,32 +1,26 @@
 export const validationFormModule = (() => {
-
     const inputText = document.querySelector('input[type="text"]');
     const inputEmail = document.querySelector('input[type="email"]');
-    const textarea = document.querySelector('.textarea');
+    const textarea = document.querySelector('.form__textarea');
     const form = document.getElementById('form');
 
     const validateForm = () => {
+        validateInput(inputText);
+        validateInput(textarea);
+        validateEmail();
         return validateInput(inputText) && validateEmail() && validateInput(textarea);
     }
 
     function eventListener() {
         form.addEventListener('submit', e => {
             e.preventDefault();
-            validateForm();
 
             if (validateForm()) {
                 console.log('submit');
                 form.submit();
             }
-        })
+        });
     }
-
-    const inputFunction = () => {
-        inputText.addEventListener('keyup', validateInput);
-        inputEmail.addEventListener('keyup', validateEmail);
-        textarea.addEventListener('keyup', validateInput);
-    }
-
 
     function validateEmail() {
         let emailError = document.getElementById('email-error');
@@ -54,9 +48,7 @@ export const validationFormModule = (() => {
     }
 
     function validateInput(validationElement) {
-        console.log(validationElement);
         const errorElement = validationElement.nextElementSibling;
-        // console.log(errorElement);
 
         if (!validationElement.value.length) {
             errorElement.innerHTML = '*This field is required, please fill it.';
