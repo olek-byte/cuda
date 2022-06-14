@@ -1,10 +1,19 @@
 :root {
-    --white-color: #fff;
+    --white-color: #ffffff;
     --red-color: rgb(212, 2, 2);
-    /* --uppercase-text-transform: uppercase; */
     --purple-color: #87509c;
     --yellow-color: #eb7d4b;
     --header-hover: #643a79;
     --services-bcg: #17c2a4;
     --team-text: #3c4761;
+    --footer-bcgr: #344b8e;
+    --footer-link-color: #30bae7;
+    --form-bcgr: #3c5499;
+    --input-bcgr: #273a71;
+    --header-list-bcgr: #4b72b6;
+    --team-bcgr: #e7f1f8;
+    --team-social-bcgr: #bdd1df;
+    --team-social-hov: #878787;
+    --team-social-fill: #77cfec;
+    --outline-color: #b7aa9a;
 }

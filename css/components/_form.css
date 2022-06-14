@@ -1,0 +1,155 @@
+.form {
+    padding: 116px 0;
+    background-color: var(--form-bcgr);
+}
+
+.form__info {
+    text-align: center;
+}
+
+.form__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.form__input-box {
+    margin-bottom: 28px;
+}
+
+.form__label {
+    width: 100%;
+    position: relative;
+}
+
+.form__label:not(:last-child) {
+    margin-right: 33px;
+}
+
+.form__input,
+.form__textarea {
+    padding: 20px 22px;
+    background-color: var(--input-bcgr);
+    color: var(--white-color);
+    border-radius: 6px;
+}
+
+.form__input {
+    min-width: 414px;
+    min-height: 56px;
+    line-height: 14px;
+}
+
+.form__input::placeholder,
+.form__textarea::placeholder {
+    color: var(--white-color);
+}
+
+.form__btn {
+    background-color: var(--footer-link-color);
+}
+
+.form__btn:hover {
+    background-color: var(--input-bcgr);
+    transition: background-color 200ms;
+}
+
+.form__textarea-box {
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.form__textarea {
+    min-height: 200px;
+    min-width: 860px;
+    resize: none;
+}
+
+.input__requirements,
+.textarea__requirements {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    bottom: -38px;
+    font-size: 13px;
+    color: var(--red-color);
+}
+
+.textarea__requirements {
+    bottom: -19px;
+}
+
+._error {
+    box-shadow: 0 0 15px var(--red-color);
+}
+
+._error+.input__requirements,
+._error+.textarea__requirements {
+    display: inline-block;
+}
+
+
+#name-error,
+#email-error,
+#message-error {
+    color: red;
+    position: absolute;
+    bottom: -40px;
+    display: block;
+    font-size: 14px;
+}
+
+#message-error {
+    bottom: -19px;
+}
+
+@media (max-width: 992px) {
+    .form {
+        padding: 60px 0;
+    }
+
+    .form__input-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form__label:not(:last-child) {
+        margin: 0 0 28px 0;
+    }
+
+    .form__input,
+    .form__textarea {
+        min-width: 600px;
+    }
+
+    .input__requirements {
+        bottom: -20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .form {
+        padding: 30px 0;
+    }
+
+    .form__input,
+    .form__textarea {
+        min-width: 444px;
+    }
+
+    .form__textarea-box {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .form__input,
+    .form__textarea {
+        min-width: 280px;
+    }
+}

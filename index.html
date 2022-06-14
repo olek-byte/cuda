@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>start html</title>
-
+    <title>Cuda</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -16,14 +15,11 @@
             <div class="header__inner">
                 <nav class="header__nav">
 
-                    <a class="header__logo" href="#">
-                        <img src="img/logo.png" alt="logo">
+                    <a class="header__logo" href="#home">
+                        <img src="img/logo.png" alt="Cuda">
                     </a>
 
-                    <div class="header__burger burger">
-                        <span class="burger__line"></span>
-                        <span class="burger__line"></span>
-                    </div>
+                    <button class="header__burger burger"></button>
 
                     <ul class="header__list uppercase">
                         <li class="header__item">
@@ -36,10 +32,10 @@
                             <a class="header__link" href="#team">Work</a>
                         </li>
                         <li class="header__item">
-                            <a class="header__link" href="#">Blog</a>
+                            <a class="header__link" href="#formSection">Blog</a>
                         </li>
                         <li class="header__item">
-                            <a class="header__link" href="#">Contact</a>
+                            <a class="header__link" href="#contact">Contact</a>
                         </li>
                     </ul>
 
@@ -54,10 +50,10 @@
             <div class="container">
                 <div class="hero__inner">
 
-                    <h1 class="hero__heading"></h1>
+                    <h1 class="hero__heading">Cudo</h1>
                     <p class="hero__text">Hi there! We are the new kids on the block
                         and we build awesome websites and mobile apps.</p>
-                    <a class="hero__link btn" href="#">
+                    <a class="hero__btn btn" href="#form">
                         Work with us!
                     </a>
 
@@ -312,10 +308,73 @@
             </div>
 
         </section>
+
+        <section class="form" id="formSection">
+            <div class="container">
+                <h2 class="form__heading heading">Get in touch</h2>
+                <div class="form__info info">
+                    <p>1600 Pennsylvania Ave NW, Washington, DC 20500, United States of America. </p>
+                    <span>Tel: </span><a href="tel:+6494461709">(202) 456-1111</a>
+                </div>
+
+                <form class="form__contacts" id="form">
+
+                    <div class="form__input-box">
+                        <label class="form__label">
+                            <input id="contact-name" class="form__input _req" type="text" placeholder="Your Name"
+                                name="firstname">
+                            <span id="name-error" class="form__input-error"></span>
+                        </label>
+
+                        <label class="form__label">
+                            <input novalidate id="contact-email" class="form__input _req _email" type="email"
+                                placeholder="Your Email" name="email">
+                            <span id="email-error" class="input__requirements"></span>
+                        </label>
+                    </div>
+
+                    <div class="form__textarea-box">
+                        <textarea id="contact-message" class="form__textarea _req textarea" placeholder="Your Message"
+                            name="description"></textarea>
+                        <span id="message-error" class="form__input-error"></span>
+                    </div>
+
+                    <button class="form__btn btn" type="submit">Send message</button>
+                    <span id="submit-error"></span>
+
+                </form>
+
+            </div>
+        </section>
     </main>
 
-
-
+    <footer class="footer" id="contact">
+        <div class="container">
+            <ul class="footer__list">
+                <li class="footer__social-item">
+                    <a class="footer__social-link" href="#">Facebook</a>
+                </li>
+                <li class="footer__social-item">
+                    <a class="footer__social-link" href="#">Twitter</a>
+                </li>
+                <li class="footer__social-item">
+                    <a class="footer__social-link" href="#">Google+</a>
+                </li>
+                <li class="footer__social-item">
+                    <a class="footer__social-link" href="#">LinkedIn</a>
+                </li>
+                <li class="footer__social-item">
+                    <a class="footer__social-link" href="#">Behance</a>
+                </li>
+                <li class="footer__social-item">
+                    <a class="footer__social-link" href="#">Dribbble</a>
+                </li>
+                <li class="footer__social-item">
+                    <a class="footer__social-link" href="#">GitHub</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 
     <svg display="none">
 
@@ -340,17 +399,12 @@
         <symbol id="email" viewBox="0 0 18 11">
             <path clip-rule="evenodd"
                 d="m.680121 0 8.319879 6.07783 8.3199-6.07783zm-.680121 9.50268v-8.15617l5.26645 3.84725zm17.4822 1.49732h-16.964447l5.989057-4.90014 2.06695 1.50995.42624.31138.42624-.31138 2.06696-1.50995zm.5178-9.65349v8.15617l-5.2665-4.30892z"
-                fill-rule="evenodd">
+                fill-rule="evenodd" />
         </symbol>
 
     </svg>
 
-
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <script src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 
 </html>
