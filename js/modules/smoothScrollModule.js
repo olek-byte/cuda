@@ -2,10 +2,14 @@ export const smoothScrollModule = (() => {
     const listActive = document.querySelector('.header__list');
     const burger = document.querySelector('.burger');
     const header = document.querySelector('.header');
-    const links = document.querySelectorAll('.header__link, .header__logo');
+    const links = document.querySelectorAll('.header__link, .header__logo, .hero__btn');
+    const headerHeight = header.getBoundingClientRect().height;
 
-    for (const link of links) {
-        link.addEventListener('click', clickHandler);
+
+    function listener() {
+        for (const link of links) {
+            link.addEventListener('click', clickHandler);
+        }
     }
 
     function clickHandler(e) {
@@ -16,16 +20,16 @@ export const smoothScrollModule = (() => {
         listActive.classList.remove('header__list--active');
         burger.classList.remove('burger--click');
 
-        console.log(header.getBoundingClientRect().height);
+        console.log(headerHeight);
 
         scroll({
-            top: offsetTop + header.getBoundingClientRect().height,
+            top: offsetTop + headerHeight,
             behavior: 'smooth'
         });
     }
 
     const init = () => {
-        clickHandler();
+        listener();
     }
 
     return {

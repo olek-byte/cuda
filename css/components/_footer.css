@@ -1,5 +1,5 @@
 .footer{
-    background-color: #344b8e;
+    background-color: var(--footer-bcgr);
 }
 
 .footer__list {
@@ -14,7 +14,7 @@
 }
 
 .footer__social-link:hover {
-    color: #30bae7;
+    color: var(--footer-link-color);
     transition: color 200ms;
 }
 

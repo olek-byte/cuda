@@ -1,6 +1,6 @@
 .team {
     padding: 123px 0 115px;
-    background-color: #e7f1f8;
+    background-color: var(--team-bcgr);
     color: var(--team-text);
 }
 
@@ -19,7 +19,7 @@
     flex-direction: column;
     align-items: center;
     max-width: 260px;
-    padding: 0 20px; 
+    padding: 0 20px;
     margin-bottom: 15px;
 }
 
@@ -44,7 +44,7 @@
 .team__position {
     display: block;
     margin-bottom: 33px;
-    color: #30bae7;
+    color: var(--footer-link-color);
     font-size: 16px;
     line-height: 18px;
 }
@@ -72,14 +72,14 @@
     justify-content: center;
     width: 33px;
     height: 33px;
-    background-color: #bdd1df;
-    fill: #fff;
+    background-color: var(--team-social-bcgr);
+    fill: var(--white-color);
     border-radius: 50%;
 }
 
 .team-social__link:hover {
-    background-color: #878787;
-    fill: #77cfec;
+    background-color: var(--team-social-hov);
+    fill: var(--team-social-fill);
     transition: all 200ms;
 }
 

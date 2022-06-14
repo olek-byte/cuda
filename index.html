@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>start html</title>
+    <title>Cuda</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -32,7 +32,7 @@
                             <a class="header__link" href="#team">Work</a>
                         </li>
                         <li class="header__item">
-                            <a class="header__link" href="#form">Blog</a>
+                            <a class="header__link" href="#formSection">Blog</a>
                         </li>
                         <li class="header__item">
                             <a class="header__link" href="#contact">Contact</a>
@@ -53,7 +53,7 @@
                     <h1 class="hero__heading">Cudo</h1>
                     <p class="hero__text">Hi there! We are the new kids on the block
                         and we build awesome websites and mobile apps.</p>
-                    <a class="hero__link btn" href="#">
+                    <a class="hero__btn btn" href="#form">
                         Work with us!
                     </a>
 
@@ -309,32 +309,41 @@
 
         </section>
 
-        <section class="form" id="form">
+        <section class="form" id="formSection">
             <div class="container">
                 <h2 class="form__heading heading">Get in touch</h2>
-                <p class="form__info info">1600 Pennsylvania Ave NW, Washington, DC 20500, United States of America.
-                    Tel: (202) 456-1111
-                </p>
+                <div class="form__info info">
+                    <p>1600 Pennsylvania Ave NW, Washington, DC 20500, United States of America. </p>
+                    <span>Tel: </span><a href="tel:+6494461709">(202) 456-1111</a>
+                </div>
 
-                <form class="form__contacts" action="#">
+                <form class="form__contacts" id="form">
 
                     <div class="form__input-box">
                         <label class="form__label">
-                            <input class="form__input" type="text" placeholder="Your Name">
+                            <input id="contact-name" class="form__input _req" type="text" placeholder="Your Name"
+                                name="firstname">
+                            <span id="name-error" class="form__input-error"></span>
                         </label>
 
                         <label class="form__label">
-                            <input class="form__input" type="email" placeholder="Your Email" required>
+                            <input novalidate id="contact-email" class="form__input _req _email" type="email"
+                                placeholder="Your Email" name="email">
+                            <span id="email-error" class="input__requirements"></span>
                         </label>
                     </div>
 
                     <div class="form__textarea-box">
-                        <textarea class="form__textarea" placeholder="Your Message"></textarea>
+                        <textarea id="contact-message" class="form__textarea _req textarea" placeholder="Your Message"
+                            name="description"></textarea>
+                        <span id="message-error" class="form__input-error"></span>
                     </div>
 
                     <button class="form__btn btn" type="submit">Send message</button>
+                    <span id="submit-error"></span>
 
                 </form>
+
             </div>
         </section>
     </main>

@@ -47,19 +47,29 @@ img {
 }
 
 button {
-  padding: 0;
-  border: none;
-  font: inherit;
-  color: inherit;
-  background-color: transparent;
-  cursor: pointer;
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
 }
 
 input,
 button,
 textarea,
 select {
-  font: inherit;
-  border: none;
-  outline-color: #b7aa9a;
+    font: inherit;
+    border: none;
+    outline-color: var(--outline-color);
+}
+
+input:focus,
+textarea:focus {
+    outline: 0;
+    background-color: var(--team-social-fill);
 }

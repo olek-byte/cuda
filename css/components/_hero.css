@@ -32,7 +32,7 @@
     border-radius: 4px;
 }
 
-.hero__link:hover {
+.hero__btn:hover {
     background-color: var(--header-hover);
     color: var(--yellow-color);
     transition: all 200ms;

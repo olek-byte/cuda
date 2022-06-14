@@ -1,5 +1,6 @@
 export const pageScrollModule = (() => {
     const header = document.querySelector('.header');
+    // const sticky = header.offsetTop;
 
     window.onscroll = function () {
         pageScroll();
