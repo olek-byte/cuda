@@ -1,5 +1,4 @@
 export const validationFormModule = (() => {
-
     const inputText = document.querySelector('input[type="text"]');
     const inputEmail = document.querySelector('input[type="email"]');
     const textarea = document.querySelector('.form__textarea');
