@@ -19,7 +19,7 @@ export const validationFormModule = (() => {
                 console.log('submit');
                 form.submit();
             }
-        });
+        })
     }
 
     function validateEmail() {
@@ -29,22 +29,19 @@ export const validationFormModule = (() => {
 
         if (!email.length) {
             emailError.innerHTML = '*This field is required, please fill it.';
-            inputEmail.classList.add("_error");
+            inputEmail.classList.add('error');
             return false;
         } else if (!email.match(validRegex)) {
             emailError.innerHTML = '*incorrect email.';
-            inputEmail.classList.add("_error");
-            console.log("Error 404");
+            inputEmail.classList.add('error');
             return false;
         } else if (email.match(validRegex)) {
-            console.log("Good!");
-            inputEmail.classList.remove("_error");
+            inputEmail.classList.remove('error');
             emailError.innerHTML = '';
             return true;
         } else {
             return true;
         }
-
     }
 
     function validateInput(validationElement) {
@@ -52,11 +49,12 @@ export const validationFormModule = (() => {
 
         if (!validationElement.value.length) {
             errorElement.innerHTML = '*This field is required, please fill it.';
-            validationElement.classList.add("_error");
+            validationElement.classList.add('error');
             return false;
         }
 
-        validationElement.classList.remove("_error");
+        validationElement.classList.remove('error');
+        errorElement.innerHTML = '';
         return true;
     }
 

@@ -67,39 +67,24 @@
     resize: none;
 }
 
-.input__requirements,
-.textarea__requirements {
-    display: none;
+.form__input-error {
     position: absolute;
     bottom: 0;
     left: 0;
-    bottom: -38px;
-    font-size: 13px;
-    color: var(--red-color);
 }
 
-.textarea__requirements {
-    bottom: -19px;
-}
-
-._error {
+.error {
     box-shadow: 0 0 15px var(--red-color);
 }
-
-._error+.input__requirements,
-._error+.textarea__requirements {
-    display: inline-block;
-}
-
 
 #name-error,
 #email-error,
 #message-error {
-    color: red;
     position: absolute;
     bottom: -40px;
     display: block;
     font-size: 14px;
+    color: var(--error-text-color);
 }
 
 #message-error {
@@ -126,8 +111,9 @@
         min-width: 600px;
     }
 
-    .input__requirements {
-        bottom: -20px;
+    #name-error,
+    #email-error {
+        bottom: -22px;
     }
 }
 

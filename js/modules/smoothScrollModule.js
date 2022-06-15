@@ -15,7 +15,7 @@ export const smoothScrollModule = (() => {
     function clickHandler(e) {
         e.preventDefault();
         const href = this.getAttribute('href');
-        const offsetTop = document.querySelector(href).offsetTop - 170;
+        const offsetTop = document.querySelector(href).offsetTop - 240;
 
         listActive.classList.remove('header__list--active');
         burger.classList.remove('burger--click');
@@ -35,4 +35,5 @@ export const smoothScrollModule = (() => {
     return {
         init,
     }
+
 })();
